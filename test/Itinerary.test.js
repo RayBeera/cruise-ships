@@ -3,7 +3,6 @@ const Ship = require("../src/ship.js")
 const Port = require("../src/port.js")
 
 describe('Itinerary', () => {
-
     it("can be instantiaed", () => {
         expect(new Itinerary).toBeInstanceOf(Object);
     })
@@ -17,4 +16,3 @@ it('can have ports', () => {
 
 
 });
-

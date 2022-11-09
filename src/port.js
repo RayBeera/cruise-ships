@@ -1,11 +1,15 @@
 class Port {
-    constructor(name) {
-        this.name = name;
-    }
+  constructor(name) {
+    this.name = name;
+    this.ships =[]
+  }
 
+  addShip(ship) {
+   this.ships.push(ship)
 }
 
-
-
-
-module.exports = Port; 
+removeShip(ship){
+  this.ships.pop(ship)
+}
+}
+module.exports = Port;
