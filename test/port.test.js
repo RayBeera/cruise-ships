@@ -8,35 +8,30 @@ describe("port ", () => {
   let queenMary;
 
   beforeEach(() => {
-    const port = new Port("Dover");
-    const titanic = {};
-    const queenMary = {};
+    port = new Port("Dover");
+    titanic = {};
+    queenMary = {};
   });
 
   it("can be instantiaed", () => {
     expect(new Port()).toBeInstanceOf(Object);
   });
-});
-it("has a name object", () => {
-  expect(new Port()).toHaveProperty("name");
-});
-it("can add a ship", () => {
-  const port = new Port("Dover");
-  const ship = {};
 
-  port.addShip(ship);
+  it("has a name object", () => {
+    expect(new Port()).toHaveProperty("name");
+  });
 
-  expect(port.ships).toContain(ship);
-});
+  it("can add a ship", () => {
+    port.addShip(ship);
 
-it("can remove a ship", () => {
-  const port = new Port("Dover");
-  const titanic = {};
-  const queenMary = {};
+    expect(port.ships).toContain(ship);
+  });
 
-  port.addShip(titanic);
-  port.addShip(queenMary);
-  port.removeShip(queenMary);
+  it("can remove a ship", () => {
+    port.addShip(titanic);
+    port.addShip(queenMary);
+    port.removeShip(queenMary);
 
-  expect(port.ships).toEqual([titanic]);
+    expect(port.ships).toEqual([titanic]);
+  });
 });
