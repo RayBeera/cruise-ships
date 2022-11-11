@@ -3,6 +3,18 @@ const Port = require("../src/port.js");
 const Itinerary = require("../src/Itinerary.js");
 
 describe("Ship ", () => {
+  let ship;
+  let dover;
+  let calais;
+  let itinerary;
+
+  beforeEach(() => {
+    const dover = new Port("Dover");
+    const calais = new Port("Calais");
+    const itinerary = new Itinerary([dover, calais]);
+    const ship = new Ship(itinerary);
+  });
+  describe("with ports and an itinerary", () => {});
   it("can be instantiaed", () => {
     const port = new Port("Dover");
     const itinerary = new Itinerary([port]);

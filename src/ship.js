@@ -24,7 +24,9 @@ class Ship {
 
     this.currentPort = itinerary.ports[previousPortIndex + 1];
     this.currentPort.addShip(this);
+    console.log(this)
   }
+
 }
 
 module.exports = Ship;
